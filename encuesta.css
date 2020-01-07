@@ -1,3 +1,19 @@
 body{
-    background-color: antiquewhite;
+    background-color:#fefefe
+}
+.contenedor{
+    background-color: #e0eae5;
+}
+.clasediv{
+    margin-right: 36%
+}
+.estiloboton{
+    background-color: #4CAF50;
+    border-radius: 8px;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }

@@ -308,3 +308,5 @@ function crearPaginaFinal() {
 
     document.getElementById('botonfinal').addEventListener('click', volverAlInicio, false)
 }
+
+
