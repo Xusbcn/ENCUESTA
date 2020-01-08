@@ -1,19 +1,87 @@
-body{
-    background-color:#fefefe
+body {
+    background-color: #142b866b
 }
-.contenedor{
-    background-color: #e0eae5;
+
+h1 {
+    margin-left: 14%;
 }
-.clasediv{
-    margin-right: 36%
+
+.contenedor {
+    background-color: #f1f7f4e6;
+    border: 2px solid;
+    border-radius: 5px;
+    padding-bottom: 1%;
+    padding-left: 1%;
 }
-.estiloboton{
-    background-color: #4CAF50;
+
+
+/*
+#contenedor_2 {
+    background-color: #f1f7f4e6;
+    border: 2px solid;
+    border-radius: 5px;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+*/
+
+
+/*
+.clasediv {
+     margin-right: 36%
+}*/
+
+.estiloboton {
+    background-color: #222376;
     border-radius: 8px;
     padding: 12px 28px;
     cursor: pointer;
+    font-variant: all-petite-caps;
+    color: aliceblue;
+    margin-top: 1%;
 }
+
+.botonmargin {
+    margin-bottom: 2%;
+}
+
+.botonmargine1 {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
 .disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.estilolabel {
+    font-family: "Arial Black", monospace;
+    font-size: x-large;
+    margin-bottom: 1%;
+}
+
+.estiloradio {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.myP {
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.myLI {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.classresumen {
+    font-family: cursive;
+}
+
+.labelresumen {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.labeldiv {
+    margin-left: 29%;
+    margin-bottom: 3%;
 }

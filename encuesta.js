@@ -2,7 +2,7 @@ function iniciarEncuestas() {
 
     var divinicial0 = document.createElement('div')
     var divinicial1 = document.createElement('div')
-    var divinicial2 = document.createElement('div')
+        // var divinicial2 = document.createElement('div')
     var elementoH1 = document.createElement('h1')
 
     var boton
@@ -12,15 +12,15 @@ function iniciarEncuestas() {
 
     crearDiv(divinicial0, 'contenedor_0', 'clasediv')
     crearDiv(divinicial1, 'contenedor_1', 'contenedor')
-    crearDiv(divinicial2, 'contenedor_2', 'contenedor')
+        //crearDiv(divinicial2, 'contenedor_2', 'contenedor')
 
 
     divinicial1.appendChild(elementoH1)
     divinicial1.appendChild(document.createElement('br'))
-    crearBoton(divinicial1, boton, 'botom', 'Comenzar Encuesta')
+    crearBoton(divinicial1, boton, 'botom', 'Comenzar Encuesta', 'estiloboton')
 
     divinicial0.appendChild(divinicial1)
-    divinicial0.appendChild(divinicial2)
+        //divinicial0.appendChild(divinicial2)
     document.body.appendChild(divinicial0)
 
 }
@@ -44,21 +44,24 @@ function crearFormularioe1() {
     var divradio2
     var radiobuttons2
     var labelradio2
+    var divinicial2 = document.createElement('div')
+    crearDiv(divinicial2, 'contenedor_2', 'contenedor')
+
 
     crearAtributoFormulario(formulario, 'e1', 'formularioe1')
-    crearLabel(divlabel, 'divlabel', labelformulario, formulario)
+    crearLabel(divlabel, 'divlabel', labelformulario, formulario, 'estilolabel')
     crearRadiobutons(formulario, divradio1, radiobuttons1, 'radio', 'e1radio', 'si', labelradio1, 'Si')
 
     //----para el segundo-----
 
     crearRadiobutons(formulario, divradio2, radiobuttons2, 'radio', 'e1radio', 'No', labelradio2, 'No')
-    //CREAMOS EL BOTON CONTINUAR
-    crearBoton(formulario, boton, 'buttone1', 'CONTINUAR')
+        //CREAMOS EL BOTON CONTINUAR
+    crearBoton(formulario, boton, 'buttone1', 'CONTINUAR', 'estiloboton botonmargine1')
 
 
 
     //AGREGAMOS EL FORMULARIO AL BODY
-
+    document.body.appendChild(divinicial2)
     document.getElementById('contenedor_2').appendChild(formulario)
     document.getElementById('buttone1').disabled = true
 
@@ -92,25 +95,25 @@ function crearFormularioe2() {
     var boton
     var formulario = document.createElement('form')
     var divlabel
-    var labelformulario = document.createTextNode('Gracias por haber participado en esta encuesta')
+    var labelformulario = document.createTextNode('¡Gracias por haber participado en esta encuesta!')
     var divrtextarea1
     var divrtextarea2
     var textArea1
-    var labeltextArea1 = document.createTextNode('Puedes dejarnos un comentario en el siguiente recuadro')
+    var labeltextArea1 = document.createTextNode('Puedes dejarnos un comentario en el siguiente recuadro:')
     var labeltextArea2 = document.createTextNode('Resumen de la encuesta:')
 
 
     crearAtributoFormulario(formulario, 'e2', 'formularioe2')
-    //creamos la label y añadimos al formulario creado.
+        //creamos la label y añadimos al formulario creado.
     separadorEncuesta(formulario)
 
 
-    crearLabel(divlabel, 'divlabel', labelformulario, formulario)
-    //creamos el conjunto de div + radiobutton + label ---para el primero--
+    crearLabel(divlabel, 'divlabel', labelformulario, formulario, 'estilolabel labelresumen labeldiv')
+        //creamos el conjunto de div + radiobutton + label ---para el primero--
 
-    crearLabel(divrtextarea1, 'divlabeltextarea', labeltextArea1, formulario)
+    crearLabel(divrtextarea1, 'divlabeltextarea', labeltextArea1, formulario, 'estilolabel labelresumen')
     crearTextArea(formulario, divrtextarea1, textArea1, 'textareae2')
-    crearLabel(divrtextarea2, 'divlabeltextarea', labeltextArea2, formulario)
+    crearLabel(divrtextarea2, 'divlabeltextarea', labeltextArea2, formulario, 'estilolabel labelresumen')
 
     //creamos div que contendrá el resumen de todas las respuestas
 
@@ -121,7 +124,7 @@ function crearFormularioe2() {
 
     formulario.appendChild(divseleccionusuario)
 
-    crearBoton(formulario, boton, 'buttone2', 'FINALIZAR ENCUESTA')
+    crearBoton(formulario, boton, 'buttone2', 'FINALIZAR ENCUESTA', 'estiloboton botonmargin')
 
 
 
@@ -155,11 +158,11 @@ function crearFormularioe3() {
 
     crearAtributoFormulario(formulario, 'e3', 'formularioe3')
     separadorEncuesta(formulario)
-    crearLabel(divlabel, 'divlabel', labelformulario, formulario)
+    crearLabel(divlabel, 'divlabel', labelformulario, formulario, 'estilolabel')
     crearRadiobutons(formulario, divradio1, radiobuttons1, 'radio', 'e3radio', 'Si', labelradio1, 'Si')
-    crearRadiobutons(formulario, divradio2, radiobuttons2, 'radio', 'e3radio', 'NO', labelradio2, 'NO')
+    crearRadiobutons(formulario, divradio2, radiobuttons2, 'radio', 'e3radio', 'NO', labelradio2, 'No')
     crearRadiobutons(formulario, divradio3, radiobuttons3, 'radio', 'e3radio', 'No lo se', labelradio3, 'No lo se')
-    crearBoton(formulario, boton, 'buttone3', 'CONTINUAR')
+    crearBoton(formulario, boton, 'buttone3', 'CONTINUAR', 'estiloboton botonmargin')
 
 
     //AGREGAMOS EL FORMULARIO AL BODY
@@ -198,19 +201,19 @@ function crearFormularioe4() {
 
     crearAtributoFormulario(formulario, 'e4', 'formularioe4')
     separadorEncuesta(formulario)
-    crearLabel(divlabel, 'divlabel', labelformulario, formulario)
+    crearLabel(divlabel, 'divlabel', labelformulario, formulario, 'estilolabel')
     crearRadiobutons(formulario, divcheckbox1, checkbuttons1, 'checkbox', 'e4radio', 'El sistema no evalua las competencias reales que necesita un profesional', labelcheckbox1, 'El sistema no evalua las competencias reales que necesita un profesional')
     crearRadiobutons(formulario, divcheckbox2, checkbuttons2, 'checkbox', 'e4radio', 'El sistema es injusto', labelcheckbox2, 'El sistema es injusto')
     crearRadiobutons(formulario, divcheckbox3, checkbuttons3, 'checkbox', 'e4radio', 'El sistema solo se puede aplicar a aquellos alumnos que cursan el módulo por evaluación continua', labelcheckbox3, 'El sistema solo se puede aplicar a aquellos alumnos que cursan el módulo por evaluación continua')
 
     crearRadiobutons(formulario, divcheckbox4, checkbuttons4, 'checkbox', 'e4textareacheckbox', 'Otros motivos', labeltextarea4, 'Otros motivos')
     crearTextArea(formulario, divcheckbox4, textArea4, 'textarea4')
-    //CREAMOS EL BOTON CONTINUAR
+        //CREAMOS EL BOTON CONTINUAR
 
 
 
 
-    crearBoton(formulario, boton, 'buttone4', 'CONTINUAR')
+    crearBoton(formulario, boton, 'buttone4', 'CONTINUAR', 'estiloboton botonmargin')
 
 
     //AGREGAMOS EL FORMULARIO AL BODY
@@ -250,7 +253,7 @@ function crearFormularioe5() {
 
     crearAtributoFormulario(formulario, 'e5', 'formularioe5')
     separadorEncuesta(formulario)
-    crearLabel(divlabel, 'divlabel', labelformulario, formulario)
+    crearLabel(divlabel, 'divlabel', labelformulario, formulario, 'estilolabel')
 
 
     crearRadiobutons(formulario, divcheckbox1, checkbuttons1, 'checkbox', 'e5radio', 'Es un sistema más motivador para el alumno', labelcheckbox1, 'Es un sistema más motivador para el alumno')
@@ -261,7 +264,7 @@ function crearFormularioe5() {
 
     crearRadiobutons(formulario, divcheckbox4, checkbuttons4, 'checkbox', 'e5radio', 'Ayuda al alumno a tener claros los objetivos', labelcheckbox4, 'Ayuda al alumno a tener claros los objetivos')
 
-    crearBoton(formulario, boton, 'buttone5', 'CONTINUAR')
+    crearBoton(formulario, boton, 'buttone5', 'CONTINUAR', 'estilobot')
 
     // AGREGAMOS EL FORMULARIO AL BODY
 
@@ -288,19 +291,24 @@ function crearPaginaFinal() {
     var divpaginafinal = document.createElement('div')
     var divresumenfinal = document.createElement('div')
     var boton = document.createElement('input')
+    var elementoH2 = document.createElement('h2')
+
 
     crearDiv(divpaginafinal, 'contenedor_3', 'contenedor')
     crearDiv(divresumenfinal, 'divresumen', 'classresumen')
 
-    divpaginafinal.appendChild(document.createTextNode('Esta es la paginal final'))
+    var labelformulario = document.createTextNode('RESUMEN DE TU ACTIVIDAD')
+    elementoH2.appendChild(labelformulario)
+
+    divpaginafinal.appendChild(elementoH2)
 
 
 
     divpaginafinal.appendChild(divresumenfinal)
 
     divpaginafinal.appendChild(document.createElement('br'))
-    // divpaginafinal.appendChild(botonpaginafinal)
-    crearBoton(divpaginafinal, boton, 'botonfinal', 'IR AL INICIO')
+        // divpaginafinal.appendChild(botonpaginafinal)
+    crearBoton(divpaginafinal, boton, 'botonfinal', 'IR AL INICIO', 'estiloboton')
     document.body.appendChild(divpaginafinal)
     mostrarSeleccion('divresumen')
     obtenerValorTextarea('divresumen', 2)
@@ -308,5 +316,3 @@ function crearPaginaFinal() {
 
     document.getElementById('botonfinal').addEventListener('click', volverAlInicio, false)
 }
-
-
