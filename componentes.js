@@ -83,6 +83,7 @@ function elegirFuncione2() {
 
     crearFormularioe2()
     document.getElementById('buttone4').disabled = true
+    
 
 }
 
@@ -263,3 +264,4 @@ function activarBoton(numero) {
     }
 
 }
+

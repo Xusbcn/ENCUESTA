@@ -222,8 +222,10 @@ function crearFormularioe4() {
 
     document.getElementById('buttone4').disabled = true
     document.getElementById('buttone4').addEventListener('click', elegirFuncione2, false)
+   
 
     activarBoton(4)
+    
 
 
 }
