@@ -88,7 +88,7 @@ function elegirFuncione2() {
 }
 
 
-function elegirFuncione25() {
+function elegirFuncione2_e5() {
 
     crearFormularioe2()
     document.getElementById('buttone5').disabled = true
@@ -281,13 +281,13 @@ function activarBotonchequi(numero) {
         document.getElementsByName('e' + numero + 'radio')[i].addEventListener('click', function() {
             if (this.checked) {
                 contadorA++
-                document.getElementById('buttone' + numero).disabled = false;
+               // document.getElementById('buttone' + numero).disabled = false;
+            }else{
+            contadorB++
+           // document.getElementById('buttone' + numero).disabled = true;
             }
-            contadorB
-            document.getElementById('buttone' + numero).disabled = true;
-
             if (contadorA > contadorB) {
-                document.getElementById('buttone' + numero).disabled = false;
+               // document.getElementById('buttone' + numero).disabled = false;
             }
 
         }, false)
@@ -296,11 +296,11 @@ function activarBotonchequi(numero) {
         document.getElementsByName('e' + numero + 'textareacheckbox')[j].addEventListener('click', function() {
             if (this.checked) {
                 valorTextarea.disabled = false
-                document.getElementById('buttone' + numero).disabled = false;
+               // document.getElementById('buttone' + numero).disabled = false;
             } else {
                 valorTextarea.value = '';
                 valorTextarea.disabled = true
-                document.getElementById('buttone' + numero).disabled = true;
+               // document.getElementById('buttone' + numero).disabled = true;
                 console.log('entra')
             }
             // document.getElementById('buttone' + numero).disabled = true;
@@ -310,12 +310,50 @@ function activarBotonchequi(numero) {
 }
 
 
+function comprobarCheckbox() {
+    var contador = 0
+   
+   
+    var listadeinputs = document.getElementsByName('e5radio')
+
+    for (var i = 0; i < listadeinputs.length; i++) {
+        if (listadeinputs[i].checked) {
+            contador++
+        }
 
 
-function comprobarAntes() {
+    }
+
+    
+    
+    if (contador == 0) {
+        alert('Has de elegir, al menos, una respuesta')
+        
+
+
+    } else {
+        elegirFuncione2_e5()
+       
+    }
+}
+
+
+
+function comprobarCheckboxTextarea() {
+    var contador =0
     var valorTextarea = document.getElementById('textarea4').value
     var checkboxtextareaseleccionado = document.getElementsByName('e4textareacheckbox')[0]
+    var listadeinputs = document.getElementsByName('e4radio')
 
+    for (var i = 0; i < listadeinputs.length; i++){
+        if(listadeinputs[i].checked){
+            contador++
+        }
+       
+        
+    }
+    
+    console.log('valor contador: ' + contador)
     if (checkboxtextareaseleccionado.checked && valorTextarea == '') {
 
         alert('has de cumplimentar el textarea')
@@ -323,7 +361,18 @@ function comprobarAntes() {
 
 
 
-    } else {
+    } else if (contador == 0 && checkboxtextareaseleccionado.checked || contador > 0) {
+        elegirFuncione2()
+        console.log('entra 5')
+    } 
+    else if (contador == 0) {
+        alert('Has de elegir, al menos, una respuesta')
+       // elegirFuncione2()
+
+
+    }
+
+    else {
         elegirFuncione2()
         console.log('entra 3')
     }

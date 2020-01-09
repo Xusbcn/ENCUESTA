@@ -220,10 +220,10 @@ function crearFormularioe4() {
 
     document.getElementById('contenedor_2').appendChild(formulario)
 
-    document.getElementById('buttone4').disabled = true
+    //document.getElementById('buttone4').disabled = true
     document.getElementById('textarea4').disabled = true
         //document.getElementById('buttone4').addEventListener('click', elegirFuncione2, false)
-    document.getElementById('buttone4').addEventListener('click', comprobarAntes, false)
+    document.getElementById('buttone4').addEventListener('click', comprobarCheckboxTextarea, false)
 
 
     activarBotonchequi(4)
@@ -268,15 +268,15 @@ function crearFormularioe5() {
 
     crearRadiobutons(formulario, divcheckbox4, checkbuttons4, 'checkbox', 'e5radio', 'Ayuda al alumno a tener claros los objetivos', labelcheckbox4, 'Ayuda al alumno a tener claros los objetivos')
 
-    crearBoton(formulario, boton, 'buttone5', 'CONTINUAR', 'estilobot')
+    crearBoton(formulario, boton, 'buttone5', 'CONTINUAR', 'estiloboton')
 
     // AGREGAMOS EL FORMULARIO AL BODY
 
     document.getElementById('contenedor_2').appendChild(formulario)
-    document.getElementById('buttone5').disabled = true
-    activarBoton(5)
+    //document.getElementById('buttone5').disabled = true
+    //activarBoton(5)
 
-    document.getElementById('buttone5').addEventListener('click', elegirFuncione25, false)
+    document.getElementById('buttone5').addEventListener('click', comprobarCheckbox, false)
 
 }
 //ACTIVAMOS EL BOTÓN QUE INICIARÁ LA ENCUESTA.
