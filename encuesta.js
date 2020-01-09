@@ -221,11 +221,13 @@ function crearFormularioe4() {
     document.getElementById('contenedor_2').appendChild(formulario)
 
     document.getElementById('buttone4').disabled = true
-    document.getElementById('buttone4').addEventListener('click', elegirFuncione2, false)
-   
+    document.getElementById('textarea4').disabled = true
+        //document.getElementById('buttone4').addEventListener('click', elegirFuncione2, false)
+    document.getElementById('buttone4').addEventListener('click', comprobarAntes, false)
 
-    activarBoton(4)
-    
+
+    activarBotonchequi(4)
+
 
 
 }
