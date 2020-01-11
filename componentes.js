@@ -47,8 +47,10 @@ function crearRadiobutons(formulario, div, radio, tipo, name, value, label, text
 }
 
 //FUNCION QUE CREA UN SEPARADOR ENTRE ENCUESTAS
-function separadorEncuesta(formulario) {
-    formulario.appendChild(document.createTextNode('*****************************************************************************************************************************'))
+function separadorEncuesta(formulario,clase) {
+    var lineahorizontal = document.createElement('hr')
+   // lineahorizontal.setAttribute('class',clase)
+    formulario.appendChild(lineahorizontal)
 }
 
 
@@ -229,8 +231,10 @@ function obtenerValorTextarea(div1, numero) {
     if (contenidoTextarea != '') {
         listLI.appendChild(document.createTextNode(contenidoTextarea))
 
-
-        document.getElementById(div1).appendChild(document.createTextNode('TU COMENTARIO FINAL: '))
+        var labeldecomentariofinal = document.createElement('p')
+        labeldecomentariofinal.setAttribute('class','labelfinal')
+        labeldecomentariofinal.appendChild(document.createTextNode('TU COMENTARIO FINAL: '))
+        document.getElementById(div1).appendChild(labeldecomentariofinal)
         document.getElementById(div1).appendChild(document.createElement('br'))
         document.getElementById(div1).appendChild(listLI)
     }
