@@ -225,6 +225,7 @@ function obtenerValorTextarea(div1, numero) {
     var listaUL = document.createElement('ul')
     listaUL.setAttribute('class', 'myUL')
     var listLI = document.createElement('li')
+    listaUL.appendChild(listLI)
     listLI.setAttribute('class', 'myLI')
     var contenidoTextarea = document.getElementById('textareae' + numero).value
 
@@ -235,8 +236,8 @@ function obtenerValorTextarea(div1, numero) {
         labeldecomentariofinal.setAttribute('class','labelfinal')
         labeldecomentariofinal.appendChild(document.createTextNode('TU COMENTARIO FINAL: '))
         document.getElementById(div1).appendChild(labeldecomentariofinal)
-        document.getElementById(div1).appendChild(document.createElement('br'))
-        document.getElementById(div1).appendChild(listLI)
+       // document.getElementById(div1).appendChild(document.createElement('br'))
+        document.getElementById(div1).appendChild(listaUL)
     }
 
 }
