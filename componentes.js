@@ -236,7 +236,7 @@ function obtenerValorTextarea(div1, numero) {
         labeldecomentariofinal.setAttribute('class','labelfinal')
         labeldecomentariofinal.appendChild(document.createTextNode('TU COMENTARIO FINAL: '))
         document.getElementById(div1).appendChild(labeldecomentariofinal)
-       // document.getElementById(div1).appendChild(document.createElement('br'))
+       
         document.getElementById(div1).appendChild(listaUL)
     }
 
@@ -268,7 +268,7 @@ function activarBoton(numero) {
             if (this.checked) {
                 document.getElementById('buttone' + numero).disabled = false;
             }
-            // document.getElementById('buttone' + numero).disabled = true;
+           
         }, false)
     }
 
@@ -276,45 +276,30 @@ function activarBoton(numero) {
 
 
 function activarBotonchequi(numero) {
-    var contadorA = 0
-    var contadorB = 0
+   
     var valorTextarea = document.getElementById('textarea4')
 
-    var listadeinputs = document.getElementsByName('e' + numero + 'radio')
+   
     var checkboxtextareaseleccionado = document.getElementsByName('e' + numero + 'textareacheckbox')
-    for (var i = 0; i < listadeinputs.length; i++) {
-        document.getElementsByName('e' + numero + 'radio')[i].addEventListener('click', function() {
-            if (this.checked) {
-                contadorA++
-               // document.getElementById('buttone' + numero).disabled = false;
-            }else{
-            contadorB++
-           // document.getElementById('buttone' + numero).disabled = true;
-            }
-            if (contadorA > contadorB) {
-               // document.getElementById('buttone' + numero).disabled = false;
-            }
 
-        }, false)
-    }
     for (var j = 0; j < checkboxtextareaseleccionado.length; j++) {
         document.getElementsByName('e' + numero + 'textareacheckbox')[j].addEventListener('click', function() {
             if (this.checked) {
                 valorTextarea.disabled = false
-               // document.getElementById('buttone' + numero).disabled = false;
+              
             } else {
                 valorTextarea.value = '';
                 valorTextarea.disabled = true
-               // document.getElementById('buttone' + numero).disabled = true;
-                console.log('entra')
+              
+                
             }
-            // document.getElementById('buttone' + numero).disabled = true;
+            
         }, false)
     }
 
 }
 
-
+// FUNCION QUE COMPRUEBA SI HAY, AL MENOS, UN CHECKBOX SELECCIONADO
 function comprobarCheckbox() {
     var contador = 0
    
@@ -342,7 +327,7 @@ function comprobarCheckbox() {
     }
 }
 
-
+//FUNCION QUE COMPRUEBA SI HAY, AL MENOS, UN CHECKBOX REALCIONADO CON UN TEXTAREA SELECCIONADO
 
 function comprobarCheckboxTextarea() {
     var contador =0
@@ -361,24 +346,24 @@ function comprobarCheckboxTextarea() {
     console.log('valor contador: ' + contador)
     if (checkboxtextareaseleccionado.checked && valorTextarea == '') {
 
-        alert('has de cumplimentar el textarea')
-        console.log('entra 2')
+        alert('Has de cumplimentar el textarea')
+       
 
 
 
     } else if (contador == 0 && checkboxtextareaseleccionado.checked || contador > 0) {
         elegirFuncione2()
-        console.log('entra 5')
+       
     } 
     else if (contador == 0) {
         alert('Has de elegir, al menos, una respuesta')
-       // elegirFuncione2()
+       
 
 
     }
 
     else {
         elegirFuncione2()
-        console.log('entra 3')
+       
     }
 }

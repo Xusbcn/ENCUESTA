@@ -220,9 +220,9 @@ function crearFormularioe4() {
 
     document.getElementById('contenedor_2').appendChild(formulario)
 
-    //document.getElementById('buttone4').disabled = true
+    
     document.getElementById('textarea4').disabled = true
-        //document.getElementById('buttone4').addEventListener('click', elegirFuncione2, false)
+       
     document.getElementById('buttone4').addEventListener('click', comprobarCheckboxTextarea, false)
 
 
@@ -273,8 +273,7 @@ function crearFormularioe5() {
     // AGREGAMOS EL FORMULARIO AL BODY
 
     document.getElementById('contenedor_2').appendChild(formulario)
-    //document.getElementById('buttone5').disabled = true
-    //activarBoton(5)
+    
 
     document.getElementById('buttone5').addEventListener('click', comprobarCheckbox, false)
 
